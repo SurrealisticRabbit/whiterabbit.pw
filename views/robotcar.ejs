@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script>
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle('open');
+            let element = document.getElementById('menuouter');
+            if (element.style.padding === '20px 20px 120px') {
+                element.style.padding = '20px';
+            } else {
+                element.style.padding = '20px 20px 120px';
+                console.log(element.style.padding)
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <header id="menuouter" class="navigation">
+        <div id="logo">
+            <img src="https://www.pngkit.com/png/full/112-1123317_white-rabbit-clip-art-bunny-icon-white-png.png">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li id="login"><a href="/">Login</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li id="login"><a href="/">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="mainContent">
+        <h1>Robot Car</h1>
+    </div>
+
+    <div class="mainContent">
+        <h1>Components</h1>
+        <p>ESP32 - Microcontroller / Bluetooth</p>
+        <p>L928n - Motor controller</p>
+        <p>Basic Gearbox motor - Drive</p>
+        <p>AA Batteries - Power</p>
+    </div>
+
+    <div class="mainContent">
+        <h1>Configuration</h1>
+        <p>Our robot will be as imaged below - having an ESP32 connected to a L298n motor driver, this then connecting to the two DC motors that we will be using, the diagram below is not completely representative of our project but it shows the main connections.
+            where it differs is a slightly different pcb layout for the motor controller, and that it shows two wires going off-image which are connected to a 4x AA battery holding case. We are also able to draw 5v from the L928n in order to power the
+            ESP32.
+        </p>
+    </div>
+
+    <div class="mainContent">
+        <h1>Code / Logic</h1>
+        <img style="width: 100%;" src="/img/schematic.PNG">
+        <a href="https://github.com/SurrealisticRabbit/RobotCar/blob/main/src/main.cpp" class="button">Code Here</a>
+    </div>
+
+    <div class="mainContent">
+        <a href="https://microcontrollerslab.com/esp32-pinout-use-gpio-pins/" class="button">More info on ESP32</a>
+        <a href="https://randomnerdtutorials.com/esp32-dc-motor-l298n-motor-driver-control-speed-direction/" class="button">More on ESP32 + L298n together</a>
+    </div>
+</body>
+
+</html>

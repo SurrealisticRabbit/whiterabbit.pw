@@ -1,0 +1,30 @@
+{
+    "name": "refinednode",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "bedrock-protocol": "^3.10.0",
+        "dotenv": "^16.0.0",
+        "ejs": "^3.1.6",
+        "express": "^4.17.3",
+        "express-flash": "^0.0.2",
+        "express-session": "^1.17.2",
+        "fs-extra": "^10.0.1",
+        "ip": "^1.1.5",
+        "jsonfile": "^6.1.0",
+        "local": "^0.3.3",
+        "method-override": "^3.0.0",
+        "nodemon": "^2.0.15",
+        "passport": "^0.5.2",
+        "passport-local": "^1.0.0",
+        "prompt-sync": "^4.2.0"
+    }
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script>
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle('open');
+            let element = document.getElementById('menuouter');
+            if (element.style.padding === '20px 20px 250px') {
+                element.style.padding = '20px';
+            } else {
+                element.style.padding = '20px 20px 250px';
+                console.log(element.style.padding)
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <header id="menuouter" class="navigation">
+        <div id="logo">
+            <img src="https://www.pngkit.com/png/full/112-1123317_white-rabbit-clip-art-bunny-icon-white-png.png">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Files</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/robotcar">Robot Car</a></li>
+                <li id="signup"><a href="/register">Register new user</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Files</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/robotcar">Robot Car</a></li>
+                <li id="signup"><a href="/register">Register new user</a></li>
+                <li>
+                    <form id="logout-form" action="/logout?_method=DELETE" method="post">
+                        <a href="#" id="signup" onclick="document.getElementById('logout-form').submit()">Logout</a>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="mainContent">
+        <h1>Welcome back,
+            <%=name%>
+        </h1>
+    </div>
+    <div class="mainContent">
+        <h1>Minecraft Server Status: mc.whiterabbit.pw</h1>
+        <p>Server title:
+            <%=title%>
+        </p>
+        <p>Server title:
+            <%=version%>
+        </p>
+        <p>Server title:
+            <%=players%>
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script>
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle('open');
+            let element = document.getElementById('menuouter');
+            if (element.style.padding === '20px 20px 120px') {
+                element.style.padding = '20px';
+            } else {
+                element.style.padding = '20px 20px 120px';
+                console.log(element.style.padding)
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <header id="menuouter" class="navigation">
+        <div id="logo">
+            <img src="https://www.pngkit.com/png/full/112-1123317_white-rabbit-clip-art-bunny-icon-white-png.png">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li id="login"><a href="/">Login</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li id="login"><a href="/">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="loginBox">
+        <h1>Login Here</h1>
+        <p>Please put in the provided username and password, or request one.</p>
+
+        <div class="container">
+            <form id="login-form" action="/login" method="post">
+                <p>Username</p>
+                <input class="logintext" type="text" name="username" id="username" required>
+                <p>Password</p>
+                <input class="loginpassword" type="password" name="password" id="password" required>
+                <p>
+                    <% if (messages.error) {%>
+                        <%= messages.error %>
+                            <% } %>
+                </p>
+                <a href="#" class="loginButton" onclick="document.getElementById('login-form').submit()">Login</a>
+            </form>
+        </div>
+    </div>
+
+    <div class="mainContent">
+        <h1>Welcome to whiterabbit.pw</h1>
+        <p>Look below to see an Overview of some things</p>
+    </div>
+</body>
+
+</html>

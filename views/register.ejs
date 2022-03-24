@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script>
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle('open');
+            let element = document.getElementById('menuouter');
+            if (element.style.padding === '20px 20px 230px') {
+                element.style.padding = '20px';
+            } else {
+                element.style.padding = '20px 20px 230px';
+                console.log(element.style.padding)
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <header id="menuouter" class="navigation">
+        <div id="logo">
+            <img src="https://www.pngkit.com/png/full/112-1123317_white-rabbit-clip-art-bunny-icon-white-png.png">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Files</a></li>
+                <li><a href="/">Services</a></li>
+                <li id="login"><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Files</a></li>
+                <li><a href="/">Services</a></li>
+                <li id="login"><a href="/login">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="registerBox">
+        <h1>Register new user</h1>
+        <p>Enter in username and password for new user, both fields are capital sensitive so watch what you type.</p>
+
+        <div class="container">
+            <form id="register-form" action="/register" method="post">
+                <p>Username</p>
+                <input class="registertext" type="text" id="username" name="username" required>
+                <p>Password</p>
+                <input class="registerpassword" type="password" id="username" name="username" required>
+                <p>
+                    <% if (messages.error) {%>
+                        <%= messages.error %>
+                            <% } %>
+                </p>
+                <a href="#" class="registerButton" onclick="document.getElementById('signup-form').submit()">Register</a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

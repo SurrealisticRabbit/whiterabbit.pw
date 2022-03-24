@@ -1,0 +1,449 @@
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background-image: url("/img/background.jpg");
+    background-size: 100%;
+}
+
+.messageBox {
+    box-shadow: rgba(50, 50, 93, 0.45) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.6) 0px 18px 36px -18px inset;
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: none;
+    border-radius: 10px;
+}
+
+.container {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    position: relative;
+    margin: 5px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: none;
+    border-radius: 10px;
+}
+
+.messagetext {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    font-family: 'Jost', sans-serif;
+    outline: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.messagetext:focus {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transition: 0.2s;
+}
+
+.messageButton {
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(175, 255, 17, 0.45);
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.messageButton:hover {
+    width: 210px;
+    color: rgba(175, 255, 17, 0.85);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transition: 0.2s;
+}
+
+.sentMessage,
+.recvMessage {
+    position: relative;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+}
+
+.sentMessage {
+    text-align: right;
+    background-color: rgba(188, 38, 255, 0.25);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.sentMessage p {
+    font-size: 12px;
+    float: left;
+    text-align: center;
+    background-color: rgba(175, 255, 17, 0.25);
+    display: block;
+    border: none;
+    border-radius: 7px;
+    padding: 1px;
+}
+
+.sentMessage h1 {
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: left;
+    display: inline-block;
+    border: none;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.recvMessage p {
+    font-size: 12px;
+    float: right;
+    text-align: center;
+    background-color: rgba(188, 38, 255, 0.25);
+    display: block;
+    border: none;
+    border-radius: 7px;
+    padding: 1px;
+}
+
+.recvMessage h1 {
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: right;
+    display: inline-block;
+    border: none;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.recvMessage {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    text-align: left;
+    background-color: rgba(175, 255, 17, 0.25);
+}
+
+.mainContent {
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.45) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.6) 0px 18px 36px -18px inset;
+}
+
+.mainContent h1 {
+    color: rgba(93, 207, 120, 0.88);
+}
+
+.mainContent p {
+    color: rgba(93, 207, 120, 0.88);
+}
+
+.loginButton {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: 200px;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(93, 207, 120, 0.88);
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.loginButton:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(93, 207, 120, 0.88);
+    color: rgba(81, 134, 167, 1.00);
+    width: 225px;
+    transition: 0.2s;
+}
+
+.button {
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: 200px;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(71, 231, 183, 0.88);
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.button:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(32, 156, 129, 0.88);
+    color: rgb(194, 231, 255);
+    width: 225px;
+    transition: 0.2s;
+}
+
+.logintext,
+.loginpassword {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.registerButton {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: 200px;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(188, 55, 63, 0.88);
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.registerButton:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(188, 55, 63, 0.88);
+    color: rgba(81, 134, 167, 1.00);
+    width: 223px;
+    transition: 0.2s;
+}
+
+.registertext,
+.registerpassword {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.registerBox {
+    box-shadow: rgba(50, 50, 93, 0.45) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.6) 0px 18px 36px -18px inset;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    ;
+    border: none;
+    border-radius: 10px;
+}
+
+.registerBox h1 {
+    color: rgba(188, 55, 63, 0.88);
+}
+
+.registerBox p {
+    color: rgba(188, 55, 63, 0.88);
+}
+
+.loginBox {
+    box-shadow: rgba(50, 50, 93, 0.45) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.6) 0px 18px 36px -18px inset;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: none;
+    border-radius: 10px;
+}
+
+.loginBox h1 {
+    color: rgba(93, 207, 120, 0.88);
+}
+
+.loginBox p {
+    color: rgba(93, 207, 120, 0.88);
+}
+
+.navigation {
+    box-shadow: rgba(50, 50, 93, 0.45) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.6) 0px 18px 36px -18px inset;
+    display: flex;
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.navigation img {
+    width: 40px;
+}
+
+.navigation h1,
+p,
+a {
+    font-family: 'Jost', sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+header a {
+    text-decoration: none;
+}
+
+header {
+    overflow: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+#logo a {
+    color: #09c372;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul a {
+    color: white;
+}
+
+ul li {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#login,
+#signup {
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+#login {
+    border: 1px solid #498afb;
+}
+
+#signup {
+    border: 1px solid #ff3860;
+    color: #ff3860;
+}
+
+#signup a {
+    color: #ff3860;
+}
+
+#login a {
+    color: #498afb;
+}
+
+#hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+}
+
+.mobile-menu li {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+    #hamburger-icon {
+        display: block;
+    }
+}
